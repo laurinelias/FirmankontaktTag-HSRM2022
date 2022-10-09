@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  color: var(--black);
+  font-family: var(--font-family);
+  margin: 0;
+}
+
+body {
+  margin: var(--site-tb-border) var(--site-lr-border);
+  @include scrollbar(15px);
+}

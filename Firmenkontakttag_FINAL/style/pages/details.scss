@@ -1,0 +1,147 @@
+@import "../main";
+
+@include background-white-wave;
+
+.detail-box {
+  margin-top: calc(var(--section-seperation-space) * 2);
+  background-color: white;
+  border-radius: 50px;
+  padding: 50px;
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .company-name {
+    font-size: var(--heading1);
+    font-weight: var(--bold);
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    font-size: var(--heading6);
+    font-weight: var(--medium);
+    margin-bottom: 20px;
+  }
+
+  .text {
+    font-size: var(--parM);
+    font-weight: var(--light);
+    margin-bottom: 20px;
+  }
+
+  .location-grid {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 50px;
+    .icon {
+      height: 40px;
+    }
+    .location {
+      font-size: var(--heading6);
+      font-weight: var(--medium);
+    }
+  }
+
+  .contact-title {
+    font-size: var(--heading2);
+    font-weight: var(--bold);
+    margin-bottom: 20px;
+  }
+
+  .contact-grid {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    img {
+      height: 100px;
+    }
+    .adress {
+      .name {
+        font-size: var(--parM);
+        font-weight: var(--bold);
+      }
+      .street,
+      .number,
+      .email {
+        font-size: var(--parM);
+        font-weight: var(--medium);
+      }
+    }
+    .download-grid {
+      gap: 10px;
+      margin-top: auto;
+      align-items: center;
+      margin-left: auto;
+      display: flex;
+      .icon {
+        height: 40px;
+      }
+      p {
+        margin: 0;
+        font-size: var(--parM);
+        font-weight: var(--bold);
+      }
+    }
+  }
+
+  @media (min-width: $desktop-upper-boundary) {
+    margin-left: 250px;
+    margin-right: 250px;
+    .logo {
+      height: 160px;
+    }
+  }
+
+  @media (max-width: $desktop-upper-boundary) {
+    margin-left: 100px;
+    margin-right: 100px;
+    .logo {
+      height: 100px;
+    }
+  }
+
+  @media (max-width: $tablet-landscape-upper-boundary) {
+    margin-top: var(--section-seperation-space);
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 25px;
+    .company-name,
+    .subtitle,
+    .text,
+    .contact-title,
+    .name,
+    .street,
+    .number,
+    .email {
+      text-align: center;
+    }
+
+    .contact-grid,
+    .location-grid {
+      flex-direction: column;
+    }
+    .contact-grid {
+      .download-grid {
+        margin-left: unset;
+      }
+    }
+
+    .logo {
+      height: 100px;
+    }
+  }
+
+  @media (max-width: $phone-upper-boundary) {
+    border-radius: 20px;
+    margin-bottom: 200px;
+    padding: 15px;
+    .logo {
+      width: 80%;
+      height: unset;
+    }
+  }
+}

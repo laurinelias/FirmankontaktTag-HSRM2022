@@ -1,0 +1,21 @@
+:root {
+  --section-seperation-space: 180px;
+  --part-seperation-space: 50px;
+  --site-tb-border: 50px;
+
+  @media (min-width: $desktop-upper-boundary) {
+    --site-lr-border: 250px;
+  }
+  @media (max-width: $desktop-upper-boundary) {
+    --site-lr-border: 140px;
+  }
+  @media (max-width: $tablet-landscape-upper-boundary) {
+    --site-lr-border: 75px;
+  }
+  @media (max-width: $phone-upper-boundary) {
+    --section-seperation-space: 100px;
+    --part-seperation-space: 30px;
+    --site-lr-border: 25px;
+    --site-tb-border: 25px;
+  }
+}

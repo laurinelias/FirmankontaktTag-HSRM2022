@@ -1,0 +1,136 @@
+.card {
+  padding: 25px;
+  border-radius: 7px;
+  background-color: white;
+
+  .top-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+
+    .name {
+      font-size: var(--heading6);
+      font-weight: var(--bold);
+    }
+  }
+
+  .location-grid {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+
+    .icon {
+      height: var(--icon-height);
+    }
+    .location {
+      font-size: var(--parM);
+      font-weight: var(--medium);
+    }
+  }
+
+  .text {
+    overflow: auto;
+    @include scrollbar(3px);
+    height: 150px;
+    font-size: var(--parS);
+    font-weight: var(--light);
+    margin-bottom: 15px;
+  }
+
+  .link {
+    display: block;
+    font-size: var(--parM);
+    font-weight: var(--medium);
+    color: var(--black);
+    text-decoration: underline;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+    &:hover {
+      color: var(--red);
+      transition: color 0.3s ease;
+    }
+  }
+
+  .bottom-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      height: var(--icon-height);
+    }
+  }
+
+  @media (min-width: $desktop-upper-boundary) {
+    .top-grid {
+      .logo {
+        height: 55px;
+      }
+    }
+    .bottom-grid img,
+    .location-grid .icon {
+      height: 40px;
+    }
+  }
+  @media (max-width: $desktop-upper-boundary) {
+    .top-grid {
+      .logo {
+        height: 40px;
+      }
+    }
+    .bottom-grid img,
+    .location-grid .icon {
+      height: 30px;
+    }
+  }
+  @media (max-width: $tablet-landscape-upper-boundary) {
+    padding: 30px;
+    .top-grid {
+      flex-direction: column;
+      margin-bottom: 20px;
+      .logo {
+        margin-bottom: 10px;
+        height: 50px;
+      }
+    }
+    .location-grid{
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .text{
+      text-align: center;
+      height: 100px;
+    }
+    .link{
+      text-align: center;
+    }
+    .bottom-grid{
+      button{
+        justify-self: center;
+      }
+    }
+   
+    .bottom-grid img,
+    .location-grid .icon {
+      height: 30px;
+    }
+
+    // background-color: green;
+  }
+  @media (max-width: $phone-upper-boundary) {
+    .top-grid {
+      .logo {
+        height: 40px;
+      }
+    }
+    .text{
+      height: 150px;
+    }
+    .bottom-grid img,
+    .location-grid .icon {
+      height: 20px;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+button {
+  font-size: var(--parM);
+  font-weight: var(--bold);
+  background-color: var(--red);
+  border: 2px var(--red) solid;
+  color: white;
+  border-radius: 7px;
+  width: min-content;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  a{
+    color: unset;
+  }
+  &:hover {
+    border-color: var(--red);
+    background-color: white;
+    color: var(--red);
+    transition: background-color 0.2s ease;
+    transition: color 0.6s ease;
+  }
+
+  &.white{
+    background-color: white;
+    color: var(--red);
+
+    &:hover {
+      border-color: white;
+      background-color:  var(--red);
+      color: white;
+      transition: background-color 0.2s ease;
+      transition: color 0.6s ease;
+    }
+  }
+  
+
+  @media (min-width: $desktop-upper-boundary) {
+    padding: 9.6px 24px;
+  }
+  @media (max-width: $desktop-upper-boundary) {
+    padding: 8px 20px;
+  }
+  @media (max-width: $tablet-landscape-upper-boundary) {
+    padding: 7.2px 18px;
+  }
+  @media (max-width: $phone-upper-boundary) {
+    padding: 6.4px 16px;
+  }
+
+}

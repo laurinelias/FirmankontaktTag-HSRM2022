@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style/pages/formular.css" rel="stylesheet" />
+    <title>Formular</title>
+  </head>
+  <body>
+    <!-- navigation --desktop -->
+    <div class="nav">
+      <img class="logo" src="/logos/Logo-Hochschule-RheinMain.svg" />
+      <ul>
+        <li><link href="#" />Home<link /></li>
+        <li class="active"><link href="#" />Veranstaltung<link /></li>
+        <li><link href="#" />Übersicht<link /></li>
+      </ul>
+    </div>
+
+    <!-- navigation --mobile -->
+    <div class="nav-mobile">
+      <img alt="svgImg" src="../icons/menu.svg" />
+      <p>Home</p>
+    </div>
+
+    <!-- logo-mobile -->
+    <img src="../img/top-illu-mobile.png" alt="logo" class="logo-mobile" />
+
+    <div class="welcome">
+      <div class="text-box">
+        <p class="title">Anmeldung für Firmen</p>
+        <p class="long-text">
+          Sie sind eine Firma und möchten sich selber bei unserem Kontakttag
+          aufstellen? Kein problem. Füllen Sie dafür einfach das unten stehende
+          Anmeldeformular mit Ihren richtigen Daten aus! Bitte überprüfen Sie
+          Ihre Angaben erneut bevor Sie auf (Teilnahme sichern) klicken!
+          Beachten Sie bitte, dass die Bearbeitung Ihrer Daten bis zu vier
+          Wochen dauern kann, sehen Sie bitte deshalb von Nachfragen in dieser
+          Zeit ab!
+        </p>
+      </div>
+      <img src="../img/form_illu.svg" alt="illu" class="illu-desktop" />
+      <img src="../img/form_illu_mobile.png" alt="illu" class="illu-mobile" />
+    </div>
+
+    <form class="form">
+      <div class="title">Formular</div>
+      <div class="grid">
+        <label class="file-upload logo-upload">
+          <input type="file" />
+          <img src="../icons/camera.svg" alt="logo" class="logo" />
+          Firmenlogo*
+        </label>
+        <input
+          type="text"
+          required
+          placeholder="Firmenname*"
+          class="firmenname"
+          maxlength="200"
+        />
+        <input
+          type="text"
+          required
+          placeholder="Standorte*"
+          class="standorte"
+          maxlength="300"
+        />
+        <input
+          type="url"
+          required
+          placeholder="Unternehmens-Homepage*"
+          class="homepage"
+        />
+        <textarea
+          placeholder="Kurzbeschreibung*"
+          class="kurzbeschreibung"
+          cols="30"
+          rows="10"
+          required
+          maxlength="500"
+        ></textarea>
+
+        <textarea
+          placeholder="Langbeschreibung*"
+          class="langbeschreibung"
+          cols="30"
+          rows="10"
+          required
+          maxlength="2400"
+        ></textarea>
+
+        <!-- not required -->
+        <input
+          type="url"
+          placeholder="Bewerberseite-URL"
+          class="bewerber-url"
+        />
+
+        <input
+          type="email"
+          placeholder="Bewerber-EMail-Adresse"
+          maxlength="300"
+          class="bewerber-email"
+        />
+
+        <input
+          type="number"
+          placeholder="Bewerber-Telefonnr."
+          maxlength="100"
+          class="bewerber-nr"
+        />
+
+        <label class="file-upload data-upload">
+          <input type="file" multiple />
+          <img src="../icons/duplicate-outline.svg" alt="logo" class="logo" />
+          Andere Uploads (Stellenanzeigen, Flyer, PDFs ...)
+        </label>
+
+        <textarea
+          placeholder="Weitere Bewerber-Kontakt/Anschrift-Informationen"
+          class="weitere-bewerber"
+          cols="30"
+          rows="10"
+          maxlength="2000"
+        ></textarea>
+        <button type="submit" class="white">Absenden</button>
+      </div>
+    </form>
+
+    <!-- footer-->
+    <div class="footer">
+      <div class="top-illu"></div>
+      <div class="grid-wrapper">
+        <div class="grid">
+          <p>Zurück zur übersicht ?</p>
+          <button><a href="index.html">Übersicht</a></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

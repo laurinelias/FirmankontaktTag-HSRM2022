@@ -1,0 +1,77 @@
+@mixin backround-white-responsive($top, $background) {
+  background: url($background) no-repeat 0 $top,
+    linear-gradient(180deg, white $top, var(--red) $top);
+  background-size: contain;
+}
+
+@mixin background-white-illu {
+  body {
+    /* Deskopt l 2000+ */
+    @media (min-width: $desktop-upper-boundary) {
+      @include backround-white-responsive(0px, "/img/background_illu_large.svg");
+    }
+
+    /* Desktop 1200 - 2000 */
+    @media (max-width: $desktop-upper-boundary) {
+      @include backround-white-responsive(
+        0px,
+        "/img/background_illu_normal.svg"
+      );
+    }
+
+    /* Tablet (Horizontal) 900 - 1200 */
+    @media (max-width: $tablet-landscape-upper-boundary) {
+      @include backround-white-responsive(0px, "");
+    }
+
+    /* Tablet (Portrait) 600 - 900 */
+    @media (max-width: $tablet-portrait-upper-boundary) {
+      @include backround-white-responsive(0px, "");
+    }
+
+    /* Mobile 0 - 600 */
+    @media (max-width: $phone-upper-boundary) {
+      @include backround-white-responsive(0px, "");
+    }
+
+    /*  split for svg  */
+
+    /*  2000 - 2250    */
+    @media (min-width: $desktop-upper-boundary) and (max-width: 2250px) {
+      @include backround-white-responsive(
+        0px,
+        "/img/background_illu_large_long.svg"
+      );
+    }
+
+    /*  1200 - 1530    */
+    @media (min-width: $tablet-landscape-upper-boundary) and (max-width: 1530px) {
+      @include backround-white-responsive(
+        2%,
+        "/img/background_illu_normal_long.svg"
+      );
+    }
+  }
+}
+
+@mixin background-white-wave {
+
+  body {
+    background: url("/img/top-white-wave-m.png") no-repeat 0 0;
+    background-size: contain;
+    background-color: var(--red);
+
+    @media (min-width: $desktop-upper-boundary) {
+      background: url("/img/top-white-wave-l.png") no-repeat 0 0;
+      background-size: contain;
+      background-color: var(--red);
+    }
+    
+     /* Tablet (Horizontal) 900 - 1200 */
+    @media (max-width: $tablet-landscape-upper-boundary) {
+      background: url("");
+      background-color: var(--red);
+    }
+
+  }
+}

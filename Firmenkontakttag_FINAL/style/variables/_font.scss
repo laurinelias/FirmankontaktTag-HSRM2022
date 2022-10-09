@@ -1,0 +1,59 @@
+:root {
+  --font-family: "Flama";
+  --thin: 100;
+  --light: 300;
+  --medium: 500;
+  --bold: 700;
+
+  @media (min-width: $desktop-upper-boundary) {
+    --heading0: 86px;
+    --heading1: 71.66px;
+    --heading2: 59.72px;
+    --heading3: 49.77px;
+    --heading4: 41.47px;
+    --heading5: 34.56px;
+    --heading6: 28.8px;
+    --parL: 24px;
+    --parM: 20px;
+    --parS: 16.67px;
+  }
+
+  @media (max-width: $desktop-upper-boundary) {
+    --heading0: 60.20px;
+    --heading1: 50.16px;
+    --heading2: 41.80px;
+    --heading3: 34.84px;
+    --heading4: 29.03px;
+    --heading5: 24.19px;
+    --heading6: 20.16px;
+    --parL: 16.80px;
+    --parM: 14.00px;
+    --parS: 11.67px;
+  }
+
+  @media (max-width: $tablet-landscape-upper-boundary) {
+    --heading0: 59.20px;
+    --heading1: 49.16px;
+    --heading2: 40.80px;
+    --heading3: 33.84px;
+    --heading4: 28.03px;
+    --heading5: 23.19px;
+    --heading6: 19.16px;
+    --parL: 15.80px;
+    --parM: 13.00px;
+    --parS: 10.67px;
+  }
+  
+  @media (max-width: $phone-upper-boundary) {
+    --heading0: 30.79px;
+    --heading1: 27.37px;
+    --heading2: 24.33px;
+    --heading3: 21.62px;
+    --heading4: 19.22px;
+    --heading5: 17.09px;
+    --heading6: 15.19px;
+    --parL: 13.50px;
+    --parM: 12.00px;
+    --parS: 10.67px;
+  }
+}

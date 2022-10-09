@@ -1,0 +1,11 @@
+.logo-mobile {
+  display: none;
+}
+
+/*  Tablet - landscape  */
+@media (max-width: $tablet-landscape-upper-boundary) {
+  .logo-mobile {
+    display: block;
+    @include ignore_border;
+  }
+}

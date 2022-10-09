@@ -1,0 +1,16 @@
+@mixin scrollbar($width) {
+  &::-webkit-scrollbar {
+    background-color: white;
+    width: $width;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgb(192, 190, 190);
+    border-radius: 50px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+  }
+}
+

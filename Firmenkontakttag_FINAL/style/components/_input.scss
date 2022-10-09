@@ -1,0 +1,118 @@
+// normal input with icon
+.searchbar {
+  display: flex;
+  height: min-content;
+
+  input {
+    color: var(--black);
+    border: none;
+    font-size: var(--parM);
+    font-weight: var(--bold);
+    border-radius: 7px 0px 0px 7px;
+    padding-right: 0;
+
+    &::placeholder {
+      opacity: 50%;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .icon {
+    border-radius: 0px 7px 7px 0px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    img {
+      margin: auto 15px;
+    }
+  }
+}
+
+// normal input
+input,
+textarea,
+.file-upload {
+  color: var(--black);
+  border: none;
+  font-size: var(--parM);
+  font-weight: var(--bold);
+  border-radius: 7px;
+  padding-right: 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  .logo {
+    margin-right: 5px;
+  }
+
+  &::placeholder {
+    opacity: 50%;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// upload
+input[type="file"] {
+  display: none;
+}
+
+@media (min-width: $desktop-upper-boundary) {
+  input,
+  textarea {
+    padding: 18px 23px;
+  }
+  .file-upload {
+    padding: 14.5px 23px;
+  }
+  .searchbar .icon img,
+  .file-upload .logo {
+    height: 30px;
+  }
+}
+
+@media (max-width: $desktop-upper-boundary) {
+  input,
+  textarea {
+    padding: 15px 20px;
+  }
+  .file-upload {
+    padding: 10.5px 20px;
+  }
+  .searchbar .icon img,
+  .file-upload .logo {
+    height: 25px;
+  }
+}
+
+@media (max-width: $tablet-landscape-upper-boundary) {
+  input,
+  textarea {
+    padding: 13px 17px;
+  }
+  .file-upload {
+    padding: 10.5px 17px;
+  }
+  .searchbar .icon img,
+  .file-upload .logo {
+    height: 20px;
+  }
+}
+
+@media (max-width: $phone-upper-boundary) {
+  input,
+  textarea {
+    padding: 11px 14px;
+  }
+  .file-upload {
+    padding: 10px 14px;
+  }
+  .searchbar .icon img,
+  .file-upload .logo {
+    height: 15px;
+  }
+}

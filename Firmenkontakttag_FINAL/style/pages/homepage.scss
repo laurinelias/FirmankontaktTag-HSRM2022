@@ -1,0 +1,151 @@
+@import "../main";
+
+@include background-white-illu;
+
+body {
+  .welcome {
+    margin-top: var(--section-seperation-space);
+    display: flex;
+
+    .text-box {
+      p {
+        margin: 0;
+      }
+
+      .sub-title {
+        font-size: var(--heading3);
+        font-weight: var(--medium);
+        color: white;
+      }
+
+      .title {
+        font-size: var(--heading1);
+        font-weight: var(--bold);
+        color: white;
+        line-height: 0.5;
+        margin-bottom: var(--part-seperation-space);
+      }
+
+      .text {
+        font-size: var(--heading3);
+        font-weight: var(--light);
+        color: white;
+      }
+
+      .long-text {
+        width: 60%;
+        margin-top: var(--part-seperation-space);
+        font-size: var(--parL);
+        font-weight: var(--light);
+        color: white;
+        overflow: scroll;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+
+    .illu-desktop {
+      width: 40%;
+      height: 333px;
+      position: relative;
+      margin-top: 15%;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+      }
+    }
+    .illu-mobile {
+      display: none;
+    }
+  }
+
+  .firmen {
+    margin-top: var(--section-seperation-space);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: calc(var(--part-seperation-space) / 2);
+
+    .title {
+      grid-row: 1;
+      grid-column: 1 / span 2;
+      font-size: var(--heading3);
+      font-weight: var(--bold);
+      color: white;
+    }
+
+    .searchbar {
+      margin-bottom: calc(var(--part-seperation-space) / 2);
+      grid-column: 3 / span 1;
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  /** Responsive Starts here **/
+
+  /* Deskopt l */
+  @media (min-width: $desktop-upper-boundary) {
+    .welcome {
+      img {
+        margin-top: 10%;
+        height: 400px;
+      }
+      .text-box {
+        .long-text {
+          width: 70%;
+        }
+      }
+    }
+  }
+
+  /*  Deskopt 1530  */
+  @media (max-width: 1530px) {
+    .firmen {
+      grid-template-columns: 1fr 1fr;
+      .searchbar {
+        grid-column: 1 / span 2;
+      }
+      .title {
+        text-align: center;
+      }
+    }
+  }
+
+  /*  Tablet - landscape  */
+  @media (max-width: $tablet-landscape-upper-boundary) {
+    .welcome {
+      margin: unset;
+      display: block;
+      text-align: center;
+      .text-box {
+        .long-text {
+          width: 100%;
+        }
+      }
+      .illu-desktop {
+        display: none;
+      }
+      .illu-mobile {
+        margin-top: var(--part-seperation-space);
+        display: block;
+        @include ignore_border;
+      }
+    }
+    .firmen {
+      margin-top: calc(var(--section-seperation-space) / 2);
+      .card,
+      .searchbar {
+        grid-column: 1 / span 2;
+      }
+      .title {
+        text-align: center;
+      }
+    }
+  }
+}

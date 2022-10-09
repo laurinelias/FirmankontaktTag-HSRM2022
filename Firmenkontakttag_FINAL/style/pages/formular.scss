@@ -1,0 +1,135 @@
+@import "../main";
+
+@include background-white-illu;
+
+.welcome {
+  margin-top: var(--section-seperation-space);
+  display: flex;
+
+  .text-box {
+    margin-top: 10%;
+    p {
+      margin: 0;
+    }
+
+    .title {
+      font-size: var(--heading1);
+      font-weight: var(--bold);
+      color: white;
+      margin-bottom: var(--part-seperation-space);
+    }
+    .long-text {
+      width: 60%;
+      margin-top: var(--part-seperation-space);
+      font-size: var(--parL);
+      font-weight: var(--light);
+      color: white;
+    }
+  }
+
+  .illu-desktop {
+    width: 40%;
+    height: 333px;
+    position: relative;
+    margin-top: 15%;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+  }
+  .illu-mobile {
+    display: none;
+  }
+}
+
+.form {
+  margin-top: var(--section-seperation-space);
+  .title {
+    font-size: var(--heading1);
+    font-weight: var(--bold);
+    color: white;
+    margin-bottom: var(--part-seperation-space);
+  }
+  .grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    .langbeschreibung,
+    .kurzbeschreibung,
+    .weitere-bewerber {
+      grid-column: 1 / span 2;
+    }
+    .kurzbeschreibung {
+      height: 100px;
+    }
+  }
+}
+
+/* Deskopt l */
+@media (min-width: $desktop-upper-boundary) {
+  .welcome {
+    img {
+      margin-top: 10%;
+      height: 400px;
+    }
+    .text-box {
+      .long-text {
+        width: 70%;
+      }
+    }
+  }
+}
+
+/*  Deskopt 1530  */
+@media (max-width: 1530px) {
+  .firmen {
+    grid-template-columns: 1fr 1fr;
+    .searchbar {
+      grid-column: 1 / span 2;
+    }
+    .title {
+      text-align: center;
+    }
+  }
+}
+
+/*  Tablet - landscape  */
+@media (max-width: $tablet-landscape-upper-boundary) {
+  button {
+    width: 100%;
+  }
+  .welcome {
+    margin: unset;
+    display: block;
+    text-align: center;
+    .text-box {
+      margin-top: unset;
+      .long-text {
+        width: 100%;
+      }
+    }
+    .illu-desktop {
+      display: none;
+    }
+    .illu-mobile {
+      margin-top: var(--part-seperation-space);
+      display: block;
+      @include ignore_border;
+    }
+  }
+  .form {
+    .title {
+      text-align: center;
+    }
+    .grid {
+      grid-template-columns: 1fr;
+      .langbeschreibung,
+      .kurzbeschreibung,
+      .weitere-bewerber {
+        grid-column: unset;
+      }
+    }
+  }
+}
